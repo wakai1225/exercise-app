@@ -10,4 +10,6 @@ class User < ApplicationRecord
        where(conditions).where(["patient_id = :patient_id AND birth_date = :birth_date",
                                 { patient_id: patient_id, birth_date: birth_date }]).first
     end
+
+    has_many :exercises
 end
