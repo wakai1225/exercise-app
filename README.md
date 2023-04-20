@@ -65,7 +65,7 @@ Things you may want to cover:
   - belongs_to :user
 
 # ER図
-  ER図.png
+  https://user-images.githubusercontent.com/121847812/233317527-3af88056-7aef-4a66-97fb-c9693ff9fbbc.png
 # 画面遷移図
 # 開発環境
   ruby on rails / HTML/CSS / javascript 
