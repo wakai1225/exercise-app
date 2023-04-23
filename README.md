@@ -50,7 +50,7 @@ Things you may want to cover:
   | Column     | Type       | Options                        |
   | ---------- | ---------- | ------------------------------ |
   | patient_id | string     | null: false, unique: true      |
-  | birth_day  | date       | null: false                    |
+  | birth_day  | string     | null: false                    |
 
   ### Association
   - has_many :exercises

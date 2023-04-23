@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable
 
-    validates :patient_id, presence: true
+    validates :patient_id, presence: true, uniqueness: true
     validates :birth_date, presence: true, format: { with: /\A[0-9]{8}\z/, message: 'is invalid' }
 
     has_many :exercises

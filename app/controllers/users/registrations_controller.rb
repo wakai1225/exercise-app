@@ -4,7 +4,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
  
   private
   def configure_sign_up_params
-    binding.pry
     devise_parameter_sanitizer.permit(:sign_up, keys: [:patient_id, :birth_date])
   end
   
