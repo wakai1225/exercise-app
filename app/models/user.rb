@@ -11,5 +11,8 @@ class User < ApplicationRecord
                                 { patient_id: patient_id, birth_date: birth_date }]).first
     end
 
+    validates :patient_id, presence: true
+    validates :birth_date, presence: true
+
     has_many :exercises
 end
