@@ -1,5 +1,38 @@
-<div class="contact">
-  <form class="contact-form">
-    <%= link_to "ユーザー登録", new_user_registration_path, class: "send" %>  
+
+
+     <div class="NavigationMenu">
+      <p>上側ナビゲーション</p>
+      <%= link_to "ユーザー登録", new_user_registration_path, class: "send" %> 
+    </div>
+    <main>
+    <div class="LeftContent">
+      <%= form_with model: @exercise,local: true do |f| %>
+      <p>左側サイトコンテンツ</p>
+      <div class="thumbnails">
+        <div class="thum_top">
+          <div class="thumbnail"></div>
+          <div class="thumbnail"></div>
+        </div>
+        <div class="thum_center">
+          <div class="thumbnail"></div>
+          <div class="thumbnail"></div>
+        </div>
+        <div class="thum_botom">
+          <div class="thumbnail"></div>
+          <div class="thumbnail"></div>
+        </div>
+      </div>
+      <%= f.submit "登録", class: "send" %>  
+    <%end%>
+    </div>
+
+    <div class="RightContent">
+      <div class="exercises">
+        <p>アイシング</p><p>テニスボールマッサージ</p>
+        <p>肩甲骨回し</p><p>キャットバック</p>
+        <a href="https://youtube.com/shorts/ZMvzzi_88JY?feature=share">側臥位胸椎回旋</a>
+      </div>
+    </div>
+    </main>
+
   </form>
-</div>
