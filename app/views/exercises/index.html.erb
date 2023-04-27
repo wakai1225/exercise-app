@@ -1,8 +1,7 @@
 
 
      <div class="NavigationMenu">
-      <p>上側ナビゲーション</p>
-      <%= link_to "ユーザー登録", new_user_registration_path, class: "send" %> 
+    <%= link_to "logout", destroy_user_session_path, method: :delete, class: "nav-send" %>
     </div>
     <main>
     <div class="LeftContent">
