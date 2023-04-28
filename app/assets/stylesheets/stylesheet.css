@@ -30,6 +30,10 @@
 }
 a {
   text-decoration: none;
+  display: block;
+  color:inherit;
+
+
 }
 
 .thum_top {
