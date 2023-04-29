@@ -4,16 +4,20 @@ class ExercisesController < ApplicationController
   end
   
   def create
-    @exercise = Exercise.new(exercise_params)
-    if @exercise.valid?
-      @exercise.save
-      redirect_to root_path
+    @exercise = Exercise.create(exercise_params)
+    if @exercise.save
+      redirect_to action: show
     else
       render :index
     end
   end
+
+  def show
+  end
+  
+
   private
-    def exercise_params
-      params.require(:exercise).permit(:exercise).merge(user_id: current_user.id)
-    end
+  def exercise_params
+    params.require(:exercise).permit(:exercise).merge(user_id: current_user.id)
+  end
 end
