@@ -9,8 +9,8 @@
       <p>左側サイトコンテンツ</p>
       <div class="thumbnails">
         <div class="thum_top">
-          <div class="thumbnail"></div>
-          <div class="thumbnail"></div>
+          <iframe id="url_display"></iframe>
+          <div class="thumbnail" id="url_display"></div>
         </div>
         <div class="thum_center">
           <div class="thumbnail"></div>
@@ -29,12 +29,35 @@
 
     <div class="RightContent">
       <div class="exercises">
-        <a href="https://youtube.com/shorts/ZMvzzi_88JY?feature=share" class='exe'>側臥位胸椎回旋</a>
-        <a href="https://youtube.com/shorts/7K7lKSbL-aM?feature=share" class='exe'>梨状筋ストレッチ</a>
-        <a href="https://youtube.com/shorts/In8-JPlrVIE?feature=share" class='exe'>もも裏ストレッチ</a>
-        <a href="https://youtube.com/shorts/vUXlQhw5eb0?feature=share" class='exe'>肩甲骨回し</a>      
+        <a href="https://youtube.com/shorts/ZMvzzi_88JY" class='exe'>側臥位胸椎回旋</a>
+        <a href="https://youtube.com/shorts/7K7lKSbL-aM" class='exe'>梨状筋ストレッチ</a>
+        <a href="https://youtube.com/shorts/In8-JPlrVIE" class='exe'>もも裏ストレッチ</a>
+        <a href="https://youtube.com/shorts/vUXlQhw5eb0" class='exe'>肩甲骨回し</a>      
       </div>
     </div>
     </main>
 
   </form>
+
+
+  window.addEventListener('load', function() {
+    const  PicUp = document.querySelectorAll ('.exe');
+    PicUp.forEach(function(PicUp) {
+      PicUp.addEventListener('click', function() {
+        event.preventDefault();
+        const linkUrl = this.href; // リンクのURLを取得する
+        const id = linkUrl.split("shorts")[1];
+        const src = "https://youtube.com/embed/" + id;
+        e = document.getElementById('url_display').innerHTML ;
+        
+
+
+      });
+      PicUp.addEventListener('mouseover', function(){
+        PicUp.setAttribute("style", "color: red;")
+    });
+    PicUp.addEventListener('mouseout', function(){
+      PicUp.setAttribute("style", "color: black;")
+    });
+  });
+  });
