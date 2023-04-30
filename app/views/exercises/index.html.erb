@@ -8,14 +8,18 @@
       <%= form_with model: @exercise, url: exercises_path, local: true do |f| %>
       <div class="thumbnails">
         <div class="thum_top">
-
-          <iframe id="url_display"></iframe>
-          <%=  f.text_field :exercise, id:"url_text" %>
           <iframe id="url_display"></iframe>
         </div>
         <div class="thum_center">
-          <div class="thumbnail"></div>
-          <div class="thumbnail"></div>
+          <div class="thumbnail">
+            <%=  f.text_field :exercise, id:"url_text" %>
+            <input id="btn" type="button" value="clear" >
+          </div>
+
+          <div class="thumbnail">
+          <%=  f.text_field :exercise, id:"url_text" %>
+          <input id="btn" type="button" value="clear" >
+          </div>
         </div>
         <div class="thum_botom">
           <div class="thumbnail"></div>
