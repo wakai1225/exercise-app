@@ -10,7 +10,7 @@ class ExercisesController < ApplicationController
 
     else
     @exercise.errors.full_messages.join(", ")
-    render :create
+    render :index
     end
   end
 
@@ -18,6 +18,6 @@ class ExercisesController < ApplicationController
 
   private
   def exercise_params
-    params.require(:exercise).permit(:exercise).merge(user_id: current_user.id)
+    params.require(:exercise).permit(:url).merge(user_id: current_user.id)
   end
 end

@@ -1,5 +1,5 @@
 class Exercise < ApplicationRecord
-  validates :exercise, presence: true
+  validates :url, presence: true
   
   belongs_to :user
 end

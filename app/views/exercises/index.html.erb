@@ -2,7 +2,7 @@
 
      <div class="NavigationMenu">
     <%= link_to "logout", destroy_user_session_path, method: :delete, class: "nav-send" %>
-    <%= link_to "mypage", user_path(current_user.id),class: "nav-send"%>
+    <%#= link_to "mypage", user_path(current_user.id),class: "nav-send"%>
     
     </div>
     <main>
@@ -14,7 +14,7 @@
         </div>
         <div class="thum_center">
           <div class="thumbnail">
-            <%= f.text_field :exercise, id:"url_text" %>
+            <%= f.text_field :url, id:"url_text" %>
             <input id="btn" type="button" value="clear" >
           </div>
 
