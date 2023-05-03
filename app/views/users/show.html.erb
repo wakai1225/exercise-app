@@ -1,8 +1,12 @@
-<h1><%="#{@user.patient_id}"%>さんのマイページ</h1>
+<h1>ID:<%="#{@user.patient_id}"%>さんのマイページ</h1>
 
 <div class="UrlIndex">
   <div class="exercises">
-    <%= link_to  @urls %>
+    <% @exercises.each do |exercise|%>
+      <iframe src=<%=exercise.url%>></iframe>
+    <% end %>
+
+
   </div>
 </div>
   <div class="qrblock">

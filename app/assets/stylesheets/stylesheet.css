@@ -7,14 +7,23 @@
   justify-content: center;
   align-items: center;
 }
+.nav-send1 {
+  width: 100px;
+  margin: auto;
+  margin-right: 20px;
+  padding: 15px;
+  border: 1px solid #fff;
+  color: #fff;
+  display: block;
+}
 
 .nav-send {
   width: 100px;
   margin: auto;
   margin-right: 20px;
   padding: 15px;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid #1e90ff;
+  color: #1e90ff;
   display: block;
 }
 
