@@ -1,8 +1,14 @@
-<h1>マイページへようこそ</h1>
+<h1><%="#{@user.patient_id}"%>さんのマイページ</h1>
 
 <div class="UrlIndex">
   <div class="exercises">
     <%= link_to  @urls %>
   </div>
-
 </div>
+  <div class="qrblock">
+  <button id="getqrInfo" class="btn btn-default">QRコードを生成</button>
+ 
+  <div id="qrOutput">
+    <div><img id="newImg"></div>
+  </div>
+ </div>

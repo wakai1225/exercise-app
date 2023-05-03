@@ -122,4 +122,19 @@ main{
   border-radius: 3px;
 }
 
+/****QRコード生成*/
 
+.qrblock {
+  display: block;
+  display: flex;
+  text-align: center;
+}
+.btn-default {
+  height: 70px;
+  width: 100px;
+}
+
+#qrOutput {
+  align-items: center;
+  padding: auto;
+}
