@@ -59,7 +59,7 @@ Things you may want to cover:
   | Column     | Type       | Options                        |
   | ---------- | ---------- | ------------------------------ |
   | user       | references | null: false, foreign_key: true |
-  | exercise   | text       | null: false                    |
+  | exercise   | string     | null: false                    |
 
   ### Association
   - belongs_to :user

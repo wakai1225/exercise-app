@@ -11,4 +11,5 @@ Rails.application.routes.draw do
 
   
   resources :exercises
+  resources :users, only: :show
 end

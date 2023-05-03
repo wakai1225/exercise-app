@@ -6,15 +6,15 @@ class ExercisesController < ApplicationController
   def create
     @exercise = Exercise.create(exercise_params)
     if @exercise.save
-      redirect_to action: show
+      redirect_to user_path(current_user.id)
+
     else
-      render :index
+    @exercise.errors.full_messages.join(", ")
+    render :create
     end
   end
 
-  def show
-  end
-  
+
 
   private
   def exercise_params
