@@ -3,10 +3,12 @@
 
 <div class="UrlIndex">
   <div class="exercises">
-    <% @exercises.each do |exercise|%>
-      <iframe src=<%=exercise.url%>></iframe>
-    <% end %>
-
+  <% @exercises.each do |exercise| %>
+      <iframe src=<%= exercise.url1 %>></iframe>
+      <iframe src=<%= exercise.url2 %>></iframe>
+      <iframe src=<%= exercise.url3 %>></iframe>
+      <iframe src=<%= exercise.url4 %>></iframe>
+   <% end %>
 
   </div>
 </div>

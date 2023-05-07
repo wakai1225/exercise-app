@@ -49,20 +49,14 @@ a {
   display: flex;
 }
 
-.thum_center {
-  display: flex;
-}
-.thum_botom {
-  display: flex;
-}
 
-.thumbnail {
+/*.thumbnail {
   width: 200px;
   height: 100px;
   background-color: #fff;
   margin: 5px;
   margin-left: 10px;
-}
+}*/
 
 .NavigationMenu{
   height: 90px;
@@ -90,9 +84,7 @@ main{
   margin-right: 15px;
   padding: 20px;
 }
-.exercises {
-  
-}
+
 
 /****新規登録ページ*****/
 .contents {

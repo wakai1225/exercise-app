@@ -14,7 +14,10 @@ ActiveRecord::Schema.define(version: 2023_04_20_113046) do
 
   create_table "exercises", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.text "url", null: false
+    t.text "url1", null: false
+    t.text "url2"
+    t.text "url3"
+    t.text "url4"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_exercises_on_user_id"
