@@ -1,7 +1,8 @@
 class ExercisesController < ApplicationController
+  before_action :authenticate_user!, only: :index
+
   def index
     @exercise = Exercise.new
-
   end
 
   def create
@@ -9,9 +10,11 @@ class ExercisesController < ApplicationController
     if @exercise.save
       redirect_to user_path(current_user.id), notice: "Exercises created successfully"
     else
-      render :index
+      redirect_to exercises_path(current_user.id)
     end
   end
+
+
 
   private
     def exercise_params

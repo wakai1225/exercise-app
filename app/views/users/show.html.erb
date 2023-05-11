@@ -1,5 +1,7 @@
 <h1>ID:<%="#{@user.patient_id}"%>さんのマイページ</h1>
    <%= link_to "logout", destroy_user_session_path, method: :delete, class: "nav-send" %>
+   <%= link_to "登録画面", exercises_path(current_user.id), class: "nav-send" %>
+   <%#= link_to "削除", user_path(@exercises), method: :delete, class: "nav-send"%>
 
 <div class="UrlIndex">
   <div class="exercises">
