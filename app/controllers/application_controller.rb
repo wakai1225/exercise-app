@@ -6,15 +6,12 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    user_path(current_user.id)
+      user_path(resource)
   end
 
   private
   def configure_permitted_parameters
-    if resource_class == User
       devise_parameter_sanitizer.permit(:sign_up, keys: [:patient_id, :birth_date])
       devise_parameter_sanitizer.permit(:sign_in, keys: [:patient_id, :birth_date])
-    end
-
   end
 end

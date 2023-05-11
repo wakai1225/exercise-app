@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
-    registrations: 'users/registrations',
-    sessions: 'users/sessions'
+    registrations:  'users/registrations',
+    sessions:       'users/sessions'
   }
   unauthenticated do
     as :user do
@@ -9,10 +9,10 @@ Rails.application.routes.draw do
     end
   end
 
-
-  #root to: "exercises#index"
-
+  authenticated :user do
+    root :to => 'users#show', as: :authenticated_root
+  end
   
   resources :exercises
-  resources :users, only: :show
+  resources :users
 end
