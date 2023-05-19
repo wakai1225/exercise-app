@@ -19,31 +19,31 @@
         </div>
         <div class="thum_center">
           <div class="thumbnail">
-            <iframe id="id1"></iframe>
-            <%= f.text_field :url1, id:"id1" %>
-            <input id="btn" type="button" value="clear" >
+            <iframe id="url_display1"></iframe>
+            <%= f.text_field :url1 %>
+
           </div>
           <div class="thumbnail">
-            <iframe id="url_display"></iframe>
-            <%= f.text_field :url2, id:"id2" %>
-            <input id="btn" type="button" value="clear" >
+            <iframe id="url_display2"></iframe>
+            <%= f.text_field :url2 %>
+
           </div>
           <div class="thumbnail">
-            <iframe id="url_display"></iframe>
-            <%= f.text_field :url3, id:"id3" %>
-            <input id="btn" type="button" value="clear" >
+            <iframe id="url_display3"></iframe>
+            <%= f.text_field :url3 %>
+
           </div>
           <div class="thumbnail">
-            <iframe id="url_display"></iframe>
-            <%= f.text_field :url4, id:"id3" %>
-            <input id="btn" type="button" value="clear" >
+            <iframe id="url_display4"></iframe>
+            <%= f.text_field :url4 %>
+
           </div>
         </div>
 
       </div>
       <%= f.submit "登録", class: "send" ,id: "submit" %>  
 		  <%#input type="button" value="クリア" onclick="fsetcall('','','','','','','','')">%>
-      <input id="btn" type="button" value="クリア" onclick="clear">
+      <input id="btn" type="button" value="一括クリア" >
     <%end%>
     </div>
 
@@ -58,3 +58,5 @@
     </main>
 
   </form>
+
+

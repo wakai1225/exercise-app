@@ -15,24 +15,42 @@
         PicUp.setAttribute("style", "color: black;")
       });
 
-      let count = 0;
-      PicUp.addEventListener('click', function(e) {
-        e.preventDefault();
-        const linkUrl = this.href; // リンクのURLを取得する
-        const idList = ['id1', 'id2', 'id3', 'id4'];
-        const id = linkUrl.split("shorts")[1]; //リンクidの取得
-        const HtmlUrl = "https://youtube.com/embed/" + id; //HTML適応するURLに変換
-        document.getElementById(idList[count]).value = HtmlUrl; //text入力
-        count++;
-        if (count >= idList.length) {
-          count = 0;
-        }
+        PicUp.addEventListener('click', function(e) {
+          e.preventDefault();
+          const linkUrl = this.href; // リンクのURLを取得する
+          const id = linkUrl.split("shorts")[1]; //リンクidの取得
+          const HtmlUrl = "https://youtube.com/embed/" + id; //HTML適応するURLに変換
+          
+          const URL1=document.getElementById('exercise_url1');
+          const URL2=document.getElementById('exercise_url2');
+          const URL3=document.getElementById('exercise_url3');
+          const URL4=document.getElementById('exercise_url4');
+
+          
+
+          if (URL1.value=='') {
+            URL1.value = HtmlUrl;
+            document.getElementById('url_display1').src = HtmlUrl;
+          } else if (URL2.value==''){
+            URL2.value = HtmlUrl;
+            document.getElementById('url_display2').src = HtmlUrl;
+          } else if (URL3.value==''){
+            URL3.value = HtmlUrl;
+            document.getElementById('url_display3').src = HtmlUrl;
+          }
+          else if (URL4.value==''){
+            URL4.value = HtmlUrl;
+            document.getElementById('url_display4').src = HtmlUrl;
+          };
       });
-    });
+
     function clear() {
-      const idList = ['id1', 'id2', 'id3', 'id4'];
-      document.getElementById(idList[1]).value='';
+      document.getElementById('exercise_url1').value='';
+      document.getElementById('exercise_url2').value='';
+      document.getElementById('exercise_url3').value='';
+      document.getElementById('exercise_url4').value='';
     }
     document.getElementById("btn").addEventListener('click', clear, false);
     
+  });
   });
