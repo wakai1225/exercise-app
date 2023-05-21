@@ -6,7 +6,7 @@
         PicUp.setAttribute("style", "color: red;")
         e.preventDefault();
         const linkUrl = this.href; // リンクのURLを取得する
-        const id = linkUrl.split("shorts")[1]; //リンクidの取得
+        const id = linkUrl.split("watch?v=")[1]; //リンクidの取得
         const HtmlUrl = "https://youtube.com/embed/" + id; //HTML適応するURLに変換
         document.getElementById('url_display').src = HtmlUrl ; //HTMLにサムネイル表示
       });
@@ -18,7 +18,7 @@
         PicUp.addEventListener('click', function(e) {
           e.preventDefault();
           const linkUrl = this.href; // リンクのURLを取得する
-          const id = linkUrl.split("shorts")[1]; //リンクidの取得
+          const id = linkUrl.split("watch?v=")[1]; //リンクidの取得
           const HtmlUrl = "https://youtube.com/embed/" + id; //HTML適応するURLに変換
           
           const URL1=document.getElementById('exercise_url1');
