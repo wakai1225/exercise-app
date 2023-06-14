@@ -30,7 +30,7 @@ Things you may want to cover:
 # URL
   https://exercise-app-8uz0.onrender.com
 # テスト用アカウント
-  ID：任意の半角数字(例：123456)  生年月日：19990101
+  ID：任意の半角数字  生年月日：19990101
 # 利用方法
   ## エクササイズの閲覧(患者サイド)
     1.QRコードを読み取り、ログインページに遷移
